@@ -1,0 +1,10 @@
+<table>
+    <tr *ngFor="let conge of conges">
+      <td>{{ conge.dateDebut | date }}</td>
+      <td>{{ conge.dateFin | date }}</td>
+      <td>
+        <button (click)="validerConge(conge.idDemande, StatusConge.ACCEPTER)">Accepter</button>
+        <button (click)="validerConge(conge.idDemande, StatusConge.REFUSER)">Refuser</button>
+      </td>
+    </tr>
+  </table>

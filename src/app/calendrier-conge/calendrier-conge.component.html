@@ -1,0 +1,6 @@
+<div>Calendrier des congés</div>
+<ul>
+  <li *ngFor="let conge of conges">
+    {{ conge.dateDebut | date }} - {{ conge.dateFin | date }}
+  </li>
+</ul>

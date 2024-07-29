@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()" #congeForm="ngForm">
+   <h1>Crèer un nouvelle demande</h1>
+    <div>
+      <label for="dateDebut">Date de début</label>
+      <input id="dateDebut" [(ngModel)]="conge.dateDebut" name="dateDebut" type="date" required>
+    </div>
+    <div>
+      <label for="dateFin">Date de fin</label>
+      <input id="dateFin" [(ngModel)]="conge.dateFin" name="dateFin" type="date" required>
+    </div>
+    <button type="submit" [disabled]="congeForm.invalid">Demander un congé</button>
+    <button type="button" (click)="onCancel()">Annuler</button>
+</form>

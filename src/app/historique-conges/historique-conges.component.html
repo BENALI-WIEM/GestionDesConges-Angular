@@ -1,0 +1,17 @@
+<h2>Historique des Congés</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Date de début</th>
+      <th>Date de fin</th>
+      <th>Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let conge of conges">
+      <td>{{ conge.dateDebut | date }}</td>
+      <td>{{ conge.dateFin | date }}</td>
+      <td>{{ conge.status }}</td>
+    </tr>
+  </tbody>
+</table>
